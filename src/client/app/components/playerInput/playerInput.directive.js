@@ -19,8 +19,6 @@
         var vm = this;
         vm.numPlayers = 2;
 
-        vm.testModel = function() {console.log('vm.numPlayers: ', vm.numPlayers);}
-
         vm.range = function(num) {
             return new Array(num);
         };
