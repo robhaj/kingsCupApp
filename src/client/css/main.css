@@ -6,6 +6,9 @@ a {
   color: #00B7FF;
 }
 
+#modal {
+  width: 500px;
+}
 .button1 {
   margin-left: 45%;
 }
