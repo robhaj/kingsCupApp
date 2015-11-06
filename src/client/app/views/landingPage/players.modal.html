@@ -1,0 +1,31 @@
+<div class="modal-header">
+    <h3 class="modal-title">How many players?</h3>
+</div>
+<div class="modal-body">
+    <div id='modal'class="container">
+        <form>
+            <div class='row'>
+                <div class='col-md-6'>
+                    <div class="form-group">
+                        <label>Number of Players</label>
+                        <input type='number' class="form-control" step="1"
+                                                                  placeholder="2"
+                                                                  value="2"
+                                                                  min="1"
+                                                                  ng-model="vm.numPlayers">
+                    </div>
+                </div>
+                <div class='col-md-6'>
+                    <div class="form-group" ng-repeat="n in vm.range(vm.numPlayers) track by $index">
+                        <label for="#player-{{$index}}">Player Name</label>
+                        <input type="text" class="form-control" id="player-{{$index}}" placeholder="Player Name">
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-warning" type="button">Cancel</button>
+    <button class="btn btn-primary" type="button">OK</button>
+</div>
