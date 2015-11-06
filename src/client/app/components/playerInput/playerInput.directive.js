@@ -22,5 +22,13 @@
         vm.range = function(num) {
             return new Array(num);
         };
+
     }
+
+    function playerSave() {
+
+    }
+
+
+
 })();

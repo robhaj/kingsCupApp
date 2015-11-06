@@ -18,7 +18,7 @@
                 <div class='col-md-6'>
                     <div class="form-group" ng-repeat="n in vm.range(vm.numPlayers) track by $index">
                         <label for="#player-{{$index}}">Player Name</label>
-                        <input type="text" class="form-control" id="player-{{$index}}" placeholder="Player Name">
+                        <input type="text" class="form-control" id="player-{{$index}}" ng-model = 'vm.playerNames[$index]' placeholder="Player Name">
                     </div>
                 </div>
             </div>
@@ -27,5 +27,5 @@
 </div>
 <div class="modal-footer">
     <button class="btn btn-warning" type="button">Cancel</button>
-    <button class="btn btn-primary" type="button">OK</button>
+    <button class="btn btn-primary" type="button" ng-click = 'vm.logPlayers()'>OK</button>
 </div>
