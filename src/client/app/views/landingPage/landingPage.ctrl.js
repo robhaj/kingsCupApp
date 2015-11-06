@@ -16,14 +16,24 @@
                 controllerAs: 'vm'
             });
         };
+    }
 
-        function PlayersModalCtrl() {
+    PlayersModalCtrl.$inject = ['players'];
+
+    function PlayersModalCtrl(players) {
             var vm = this;
             vm.numPlayers = 2;
+
+            vm.playerNames = [];
+
+            vm.logPlayers = function() {
+                console.log(vm.playerNames);
+                players.storePlayers(vm.playerNames);
+            };
 
             vm.range = function(num) {
                 return new Array(num);
             };
+
         }
-    }
 })();
