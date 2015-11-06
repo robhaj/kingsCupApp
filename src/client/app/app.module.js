@@ -12,12 +12,12 @@
     routeConfig.$inject = ['$stateProvider', '$urlRouterProvider'];
 
     function routeConfig($stateProvider, $urlRouterProvider) {
-        $urlRouterProvider.otherwise('/test');
+        $urlRouterProvider.otherwise('/');
 
         $stateProvider
-        .state('test', {
-            url: '/test',
-            templateUrl: 'app/views/test.html'
+        .state('home', {
+            url: '/',
+            templateUrl: 'app/views/landingPage/landingPage.html'
         });
     }
 })();
